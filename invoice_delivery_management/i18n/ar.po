@@ -1,0 +1,498 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* invoice_delivery_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-24 11:04+0000\n"
+"PO-Revision-Date: 2026-09-24 11:04+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+
+#. module: invoice_delivery_management
+#: model_terms:ir.ui.view,arch_db:invoice_delivery_management.view_move_form_inherit_idm_stock
+msgid ""
+"<i class=\"fa fa-truck me-1\" title=\"Stock\"/>\n"
+"                    The stock transfer of this document is waiting for validation."
+msgstr ""
+"<i class=\"fa fa-truck me-1\" title=\"المخزون\"/>\n"
+"                    حركة المخزون الخاصة بهذا المستند بانتظار التأكيد."
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields.selection,name:invoice_delivery_management.selection__res_company__idm_shortage_policy__force
+msgid "Allow negative stock"
+msgstr "السماح بالمخزون السالب"
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_move_line__available_qty
+msgid "Available Qty"
+msgstr "الكمية المتاحة"
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields.selection,name:invoice_delivery_management.selection__res_company__idm_shortage_policy__block
+msgid "Block invoice confirmation"
+msgstr "منع تأكيد الفاتورة"
+
+#. module: invoice_delivery_management
+#: model:ir.model,name:invoice_delivery_management.model_res_company
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: invoice_delivery_management
+#: model:ir.model,name:invoice_delivery_management.model_res_config_settings
+msgid "Config Settings"
+msgstr "إعدادات التهيئة"
+
+#. module: invoice_delivery_management
+#: model_terms:ir.actions.act_window,help:invoice_delivery_management.action_idm_invoice_pickings
+msgid ""
+"Confirm a customer invoice: its products are deducted from stock "
+"automatically."
+msgstr "قم بتأكيد فاتورة عميل: سيتم خصم منتجاتها من المخزون تلقائياً."
+
+#. module: invoice_delivery_management
+#: model_terms:ir.ui.view,arch_db:invoice_delivery_management.res_config_settings_view_form_inherit_idm
+msgid "Confirming a customer credit note returns its products to stock"
+msgstr "تأكيد إشعار دائن للعميل يعيد منتجاته إلى المخزون"
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,help:invoice_delivery_management.field_res_company__idm_process_refunds
+#: model:ir.model.fields,help:invoice_delivery_management.field_res_config_settings__idm_process_refunds
+msgid "Confirming a customer credit note returns its products to stock."
+msgstr "تأكيد إشعار دائن للعميل يعيد منتجاته إلى المخزون."
+
+#. module: invoice_delivery_management
+#: model_terms:ir.ui.view,arch_db:invoice_delivery_management.res_config_settings_view_form_inherit_idm
+msgid "Confirming a customer invoice deducts its products from stock"
+msgstr "تأكيد فاتورة العميل يخصم منتجاتها من المخزون"
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields.selection,name:invoice_delivery_management.selection__stock_picking__idm_role__restock
+msgid "Credit Note Return"
+msgstr "مرتجع إشعار دائن"
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,help:invoice_delivery_management.field_account_bank_statement_line__idm_update_stock
+#: model:ir.model.fields,help:invoice_delivery_management.field_account_move__idm_update_stock
+#: model:ir.model.fields,help:invoice_delivery_management.field_account_payment__idm_update_stock
+msgid ""
+"Deduct (invoice) or return (credit note) the products in stock when this "
+"document is confirmed."
+msgstr ""
+"خصم المنتجات من المخزون (فاتورة) أو إعادتها إليه (إشعار دائن) عند تأكيد هذا "
+"المستند."
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,help:invoice_delivery_management.field_res_company__idm_auto_stock
+#: model:ir.model.fields,help:invoice_delivery_management.field_res_config_settings__idm_auto_stock
+msgid ""
+"Deduct the invoiced products from stock when a customer invoice is "
+"confirmed."
+msgstr "خصم المنتجات المفوترة من المخزون عند تأكيد فاتورة العميل."
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,help:invoice_delivery_management.field_res_company__idm_warehouse_id
+#: model:ir.model.fields,help:invoice_delivery_management.field_res_config_settings__idm_warehouse_id
+msgid ""
+"Default warehouse used for invoice stock moves. If empty, the user's default"
+" warehouse or the first warehouse of the company is used."
+msgstr ""
+"المستودع الافتراضي لحركات المخزون الناتجة عن الفواتير. إذا ترك فارغاً "
+"يُستخدم المستودع الافتراضي للمستخدم أو أول مستودع في الشركة."
+
+#. module: invoice_delivery_management
+#: model_terms:ir.ui.view,arch_db:invoice_delivery_management.view_account_invoice_filter_inherit_idm
+msgid "Delivered"
+msgstr "تم التسليم"
+
+#. module: invoice_delivery_management
+#: model_terms:ir.ui.view,arch_db:invoice_delivery_management.view_move_form_inherit_delivery
+msgid "Deliveries"
+msgstr "التسليمات"
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_bank_statement_line__delivery_count
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_move__delivery_count
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_payment__delivery_count
+msgid "Delivery"
+msgstr "التسليم"
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_bank_statement_line__delivery_status
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_move__delivery_status
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_payment__delivery_status
+#: model_terms:ir.ui.view,arch_db:invoice_delivery_management.view_account_invoice_filter_inherit_idm
+msgid "Delivery Status"
+msgstr "حالة التسليم"
+
+#. module: invoice_delivery_management
+#: model_terms:ir.ui.view,arch_db:invoice_delivery_management.view_account_invoice_filter_inherit_idm
+msgid "Delivery Waiting"
+msgstr "تسليم قيد الانتظار"
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields.selection,name:invoice_delivery_management.selection__account_move__delivery_status__done
+msgid "Done"
+msgstr "مكتمل"
+
+#. module: invoice_delivery_management
+#: model_terms:ir.ui.view,arch_db:invoice_delivery_management.view_picking_search_inherit_idm
+msgid "From Invoices"
+msgstr "من الفواتير"
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_move_line__idm_qty_warning
+msgid "Insufficient Stock"
+msgstr "مخزون غير كافٍ"
+
+#. module: invoice_delivery_management
+#: model_terms:ir.ui.view,arch_db:invoice_delivery_management.view_picking_form_inherit_idm
+msgid "Invoice"
+msgstr "الفاتورة"
+
+#. module: invoice_delivery_management
+#: model:ir.actions.act_window,name:invoice_delivery_management.action_idm_invoice_pickings
+#: model:ir.ui.menu,name:invoice_delivery_management.menu_idm_invoice_pickings
+msgid "Invoice Deliveries"
+msgstr "تسليمات الفواتير"
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields.selection,name:invoice_delivery_management.selection__stock_picking__idm_role__deduct
+msgid "Invoice Delivery"
+msgstr "تسليم فاتورة"
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_stock_picking__idm_role
+msgid "Invoice Operation"
+msgstr "عملية الفاتورة"
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields.selection,name:invoice_delivery_management.selection__stock_picking__idm_role__reversal
+msgid "Invoice Reversal"
+msgstr "عكس حركة فاتورة"
+
+#. module: invoice_delivery_management
+#: model_terms:ir.ui.view,arch_db:invoice_delivery_management.res_config_settings_view_form_inherit_idm
+msgid "Invoice Stock Deduction"
+msgstr "خصم المخزون من الفواتير"
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_company__idm_warehouse_id
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_config_settings__idm_warehouse_id
+msgid "Invoice Warehouse"
+msgstr "مستودع الفواتير"
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,help:invoice_delivery_management.field_res_company__idm_skip_sale_lines
+#: model:ir.model.fields,help:invoice_delivery_management.field_res_config_settings__idm_skip_sale_lines
+msgid ""
+"Invoice lines linked to a Sales Order are delivered by the Sales Order "
+"itself and are ignored to avoid a double deduction."
+msgstr ""
+"بنود الفاتورة المرتبطة بأمر بيع يتم تسليمها من خلال أمر البيع نفسه، ويتم "
+"تجاهلها لتجنب الخصم المزدوج."
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_move_line__idm_is_storable
+msgid "Is Storable"
+msgstr "منتج مخزني"
+
+#. module: invoice_delivery_management
+#: model:ir.model,name:invoice_delivery_management.model_account_move
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: invoice_delivery_management
+#: model:ir.model,name:invoice_delivery_management.model_account_move_line
+msgid "Journal Item"
+msgstr "عنصر اليومية"
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields.selection,name:invoice_delivery_management.selection__res_company__idm_shortage_policy__pending
+msgid "Keep the delivery waiting"
+msgstr "إبقاء التسليم قيد الانتظار"
+
+#. module: invoice_delivery_management
+#: model_terms:ir.ui.view,arch_db:invoice_delivery_management.res_config_settings_view_form_inherit_idm
+msgid "Lines invoiced from a Sales Order are delivered by the order itself"
+msgstr "البنود المفوترة من أمر بيع يتم تسليمها من خلال الأمر نفسه"
+
+#. module: invoice_delivery_management
+#. odoo-python
+#: code:addons/invoice_delivery_management/models/account_move.py:0
+#, python-format
+msgid "No delivery operation type found for warehouse %s."
+msgstr "لم يتم العثور على نوع عملية تسليم للمستودع %s."
+
+#. module: invoice_delivery_management
+#: model_terms:ir.actions.act_window,help:invoice_delivery_management.action_idm_invoice_pickings
+msgid "No invoice deliveries yet"
+msgstr "لا توجد تسليمات فواتير بعد"
+
+#. module: invoice_delivery_management
+#. odoo-python
+#: code:addons/invoice_delivery_management/models/account_move.py:0
+#, python-format
+msgid ""
+"No warehouse found for company %s. Please configure one in Invoicing "
+"settings."
+msgstr ""
+"لم يتم العثور على مستودع للشركة %s. يرجى تحديد مستودع في إعدادات الفوترة."
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields.selection,name:invoice_delivery_management.selection__account_move__delivery_status__none
+msgid "Not Linked"
+msgstr "غير مرتبط"
+
+#. module: invoice_delivery_management
+#. odoo-python
+#: code:addons/invoice_delivery_management/models/account_move.py:0
+#, python-format
+msgid ""
+"Not enough stock to confirm %(invoice)s:\n"
+"%(details)s"
+msgstr ""
+"المخزون غير كافٍ لتأكيد %(invoice)s:\n"
+"%(details)s"
+
+#. module: invoice_delivery_management
+#. odoo-python
+#: code:addons/invoice_delivery_management/models/account_move.py:0
+#, python-format
+msgid "Not enough stock: transfer %s is waiting for availability."
+msgstr "المخزون غير كافٍ: الحركة %s بانتظار توفر الكمية."
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields.selection,name:invoice_delivery_management.selection__account_move__delivery_status__partial
+msgid "Partially Done"
+msgstr "مكتمل جزئياً"
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,help:invoice_delivery_management.field_account_move_line__available_qty
+msgid ""
+"Quantity on hand in the invoice warehouse, expressed in the line unit of "
+"measure."
+msgstr "الكمية المتوفرة في مستودع الفاتورة، بوحدة قياس البند."
+
+#. module: invoice_delivery_management
+#: model_terms:ir.ui.view,arch_db:invoice_delivery_management.res_config_settings_view_form_inherit_idm
+msgid "Reset to draft / cancel reverses the stock movement of the invoice"
+msgstr "الإعادة إلى مسودة أو الإلغاء يعكس حركة المخزون الخاصة بالفاتورة"
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,help:invoice_delivery_management.field_res_company__idm_reverse_on_reset
+#: model:ir.model.fields,help:invoice_delivery_management.field_res_config_settings__idm_reverse_on_reset
+msgid ""
+"Resetting to draft or cancelling an invoice reverses its stock movement. Re-"
+"confirming the invoice creates a fresh movement with the new quantities."
+msgstr ""
+"إعادة الفاتورة إلى مسودة أو إلغاؤها يعكس حركة المخزون الخاصة بها. وعند إعادة"
+" تأكيدها يتم إنشاء حركة جديدة بالكميات الجديدة."
+
+#. module: invoice_delivery_management
+#: model_terms:ir.ui.view,arch_db:invoice_delivery_management.view_out_credit_note_tree_inherit_idm
+msgid "Return Status"
+msgstr "حالة الإرجاع"
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_company__idm_process_refunds
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_config_settings__idm_process_refunds
+msgid "Return Stock on Credit Notes"
+msgstr "إرجاع المخزون عند الإشعارات الدائنة"
+
+#. module: invoice_delivery_management
+#. odoo-python
+#: code:addons/invoice_delivery_management/models/stock_picking.py:0
+#, python-format
+msgid "Reversal of %s"
+msgstr "عكس %s"
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_company__idm_reverse_on_reset
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_config_settings__idm_reverse_on_reset
+msgid "Reverse Stock on Reset / Cancel"
+msgstr "عكس المخزون عند الإعادة لمسودة / الإلغاء"
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_stock_picking__idm_reversed
+#: model:ir.model.fields.selection,name:invoice_delivery_management.selection__account_move__delivery_status__returned
+msgid "Reversed"
+msgstr "معكوس"
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_company__idm_skip_sale_lines
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_config_settings__idm_skip_sale_lines
+msgid "Skip Lines from Sales Orders"
+msgstr "تجاهل البنود القادمة من أوامر البيع"
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_stock_picking__invoice_id
+#: model_terms:ir.ui.view,arch_db:invoice_delivery_management.view_picking_search_inherit_idm
+msgid "Source Invoice"
+msgstr "الفاتورة المصدر"
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_bank_statement_line__idm_picking_ids
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_move__idm_picking_ids
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_payment__idm_picking_ids
+msgid "Stock Transfers"
+msgstr "حركات المخزون"
+
+#. module: invoice_delivery_management
+#. odoo-python
+#: code:addons/invoice_delivery_management/models/account_move.py:0
+#, python-format
+msgid "Stock movement reversed by %s."
+msgstr "تم عكس حركة المخزون بواسطة %s."
+
+#. module: invoice_delivery_management
+#. odoo-python
+#: code:addons/invoice_delivery_management/models/account_move.py:0
+#, python-format
+msgid "Stock transfer %s created and waiting for validation."
+msgstr "تم إنشاء حركة المخزون %s وهي بانتظار التأكيد."
+
+#. module: invoice_delivery_management
+#. odoo-python
+#: code:addons/invoice_delivery_management/models/account_move.py:0
+#, python-format
+msgid "Stock updated by transfer %s."
+msgstr "تم تحديث المخزون بواسطة الحركة %s."
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,help:invoice_delivery_management.field_stock_picking__invoice_id
+msgid "The specific invoice that generated this transfer."
+msgstr "الفاتورة التي أنشأت هذه الحركة."
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,help:invoice_delivery_management.field_stock_picking__idm_reversed
+msgid ""
+"The stock movement of this transfer was reversed after its invoice was reset"
+" to draft or cancelled."
+msgstr "تم عكس حركة المخزون هذه بعد إعادة فاتورتها إلى مسودة أو إلغائها."
+
+#. module: invoice_delivery_management
+#: model:ir.model,name:invoice_delivery_management.model_stock_picking
+msgid "Transfer"
+msgstr "الحركة"
+
+#. module: invoice_delivery_management
+#. odoo-python
+#: code:addons/invoice_delivery_management/models/account_move.py:0
+#, python-format
+msgid "Transfer %s is waiting for validation."
+msgstr "الحركة %s بانتظار التأكيد."
+
+#. module: invoice_delivery_management
+#. odoo-python
+#: code:addons/invoice_delivery_management/models/account_move.py:0
+#, python-format
+msgid "Transfer %s needs Lot/Serial numbers and is waiting for validation."
+msgstr "الحركة %s تحتاج إلى أرقام دفعات/أرقام تسلسلية وهي بانتظار التأكيد."
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_bank_statement_line__idm_update_stock
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_move__idm_update_stock
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_payment__idm_update_stock
+msgid "Update Stock"
+msgstr "تحديث المخزون"
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_company__idm_auto_stock
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_config_settings__idm_auto_stock
+msgid "Update Stock from Invoices"
+msgstr "تحديث المخزون من الفواتير"
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_company__idm_auto_validate
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_config_settings__idm_auto_validate
+msgid "Validate Deliveries Automatically"
+msgstr "تأكيد التسليمات تلقائياً"
+
+#. module: invoice_delivery_management
+#: model_terms:ir.ui.view,arch_db:invoice_delivery_management.res_config_settings_view_form_inherit_idm
+msgid "Validate the delivery at once, or leave it for the warehouse team"
+msgstr "تأكيد التسليم فوراً، أو تركه لفريق المستودع"
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,help:invoice_delivery_management.field_res_company__idm_auto_validate
+#: model:ir.model.fields,help:invoice_delivery_management.field_res_config_settings__idm_auto_validate
+msgid ""
+"Validate the delivery immediately so stock is deducted at invoice "
+"confirmation. If disabled, the delivery is created and reserved, waiting for"
+" the warehouse team."
+msgstr ""
+"تأكيد التسليم فوراً ليتم خصم المخزون عند تأكيد الفاتورة. عند التعطيل يتم "
+"إنشاء التسليم وحجز الكميات بانتظار فريق المستودع."
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields.selection,name:invoice_delivery_management.selection__account_move__delivery_status__pending
+msgid "Waiting"
+msgstr "قيد الانتظار"
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_bank_statement_line__idm_warehouse_id
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_move__idm_warehouse_id
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_payment__idm_warehouse_id
+msgid "Warehouse"
+msgstr "المستودع"
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,help:invoice_delivery_management.field_account_bank_statement_line__idm_warehouse_id
+#: model:ir.model.fields,help:invoice_delivery_management.field_account_move__idm_warehouse_id
+#: model:ir.model.fields,help:invoice_delivery_management.field_account_payment__idm_warehouse_id
+msgid "Warehouse the products are delivered from (or returned to)."
+msgstr "المستودع الذي تُسلّم منه المنتجات (أو تُرجع إليه)."
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_company__idm_shortage_policy
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_config_settings__idm_shortage_policy
+msgid "When Stock is Insufficient"
+msgstr "عند عدم كفاية المخزون"
+
+#. module: invoice_delivery_management
+#. odoo-python
+#: code:addons/invoice_delivery_management/models/account_move.py:0
+#, python-format
+msgid ""
+"You cannot cancel \"%s\" because it has a completed delivery.\n"
+"Only an Accounting Manager can cancel such invoices."
+msgstr ""
+"لا يمكنك إلغاء الفاتورة \"%s\" لأنه يوجد توصيل مكتمل مرتبط بها.\n"
+"يُسمح فقط لمدير المحاسبة بإلغاء مثل هذه الفواتير."
+
+#. module: invoice_delivery_management
+#. odoo-python
+#: code:addons/invoice_delivery_management/models/account_move.py:0
+#, python-format
+msgid ""
+"You cannot delete \"%s\" because it has a completed delivery.\n"
+"Only an Accounting Manager can delete such invoices."
+msgstr ""
+"لا يمكنك حذف الفاتورة \"%s\" لأنه يوجد توصيل مكتمل مرتبط بها.\n"
+"يُسمح فقط لمدير المحاسبة بحذف مثل هذه الفواتير."
+
+#. module: invoice_delivery_management
+#. odoo-python
+#: code:addons/invoice_delivery_management/models/account_move.py:0
+#, python-format
+msgid ""
+"You cannot reset \"%s\" to draft because it has a completed delivery.\n"
+"Only an Accounting Manager can do this."
+msgstr ""
+"لا يمكنك إعادة الفاتورة \"%s\" إلى المسودة لأنه يوجد توصيل مكتمل مرتبط بها.\n"
+"يُسمح فقط لمدير المحاسبة بإجراء هذا التغيير."
+
+#. module: invoice_delivery_management
+#. odoo-python
+#: code:addons/invoice_delivery_management/models/account_move.py:0
+#, python-format
+msgid "available"
+msgstr "متاح"
