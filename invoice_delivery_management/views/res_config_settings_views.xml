@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="res_config_settings_view_form_inherit_idm" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.idm</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//block[@id='invoicing_settings']" position="after">
+                <block title="Invoice Stock Deduction" id="idm_settings">
+                    <setting id="idm_auto_stock_setting"
+                             help="Confirming a customer invoice deducts its products from stock"
+                             company_dependent="1">
+                        <field name="idm_auto_stock"/>
+                        <div class="content-group mt16" invisible="not idm_auto_stock">
+                            <div class="row">
+                                <label for="idm_warehouse_id" class="col-lg-5 o_light_label"/>
+                                <field name="idm_warehouse_id" class="col-lg-7"
+                                       domain="[('company_id', '=', company_id)]"
+                                       options="{'no_create': True}"/>
+                            </div>
+                            <div class="row mt8">
+                                <label for="idm_shortage_policy" class="col-lg-5 o_light_label"/>
+                                <field name="idm_shortage_policy" class="col-lg-7"/>
+                            </div>
+                        </div>
+                    </setting>
+                    <setting id="idm_auto_validate_setting"
+                             help="Validate the delivery at once, or leave it for the warehouse team"
+                             company_dependent="1" invisible="not idm_auto_stock">
+                        <field name="idm_auto_validate"/>
+                    </setting>
+                    <setting id="idm_process_refunds_setting"
+                             help="Confirming a customer credit note returns its products to stock"
+                             company_dependent="1" invisible="not idm_auto_stock">
+                        <field name="idm_process_refunds"/>
+                    </setting>
+                    <setting id="idm_reverse_on_reset_setting"
+                             help="Reset to draft / cancel reverses the stock movement of the invoice"
+                             company_dependent="1" invisible="not idm_auto_stock">
+                        <field name="idm_reverse_on_reset"/>
+                    </setting>
+                    <setting id="idm_skip_sale_lines_setting"
+                             help="Lines invoiced from a Sales Order are delivered by the order itself"
+                             company_dependent="1" invisible="not idm_auto_stock">
+                        <field name="idm_skip_sale_lines"/>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

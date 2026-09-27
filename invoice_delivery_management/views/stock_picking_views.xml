@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_picking_form_inherit_idm" model="ir.ui.view">
+        <field name="name">stock.picking.form.inherit.idm</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button name="action_idm_open_invoice"
+                        class="oe_stat_button"
+                        type="object"
+                        icon="edit_square"
+                        string="Invoice"
+                        invisible="not invoice_id"
+                        groups="account.group_account_invoice"/>
+            </div>
+            <xpath expr="//field[@name='origin']" position="after">
+                <field name="invoice_id" invisible="not invoice_id"/>
+                <field name="idm_role" invisible="not idm_role"/>
+                <field name="idm_reversed" invisible="not idm_reversed"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_picking_search_inherit_idm" model="ir.ui.view">
+        <field name="name">stock.picking.search.inherit.idm</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_internal_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='backorder']" position="after">
+                <filter string="From Invoices" name="idm_from_invoice"
+                        domain="[('invoice_id', '!=', False)]"/>
+            </xpath>
+            <xpath expr="//group" position="inside">
+                <filter string="Source Invoice" name="idm_group_invoice"
+                        context="{'group_by': 'invoice_id'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Invoicing > Customers > Invoice Deliveries -->
+    <record id="action_idm_invoice_pickings" model="ir.actions.act_window">
+        <field name="name">Invoice Deliveries</field>
+        <field name="res_model">stock.picking</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('invoice_id', '!=', False)]</field>
+        <field name="context">{'create': False}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No invoice deliveries yet</p>
+            <p>Confirm a customer invoice: its products are deducted from stock automatically.</p>
+        </field>
+    </record>
+
+    <menuitem id="menu_idm_invoice_pickings"
+              name="Invoice Deliveries"
+              parent="account.menu_finance_receivables"
+              action="action_idm_invoice_pickings"
+              groups="stock.group_stock_user"
+              sequence="30"/>
+
+</odoo>

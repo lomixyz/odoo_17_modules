@@ -1,0 +1,514 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* invoice_delivery_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 20.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-27 10:42+0000\n"
+"PO-Revision-Date: 2026-09-27 10:42+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: invoice_delivery_management
+#: model:ir.module.module,description:base.module_invoice_delivery_management
+msgid ""
+"\n"
+"Invoice Delivery Management\n"
+"===========================\n"
+"Designed to save time by linking inventory directly to invoices.\n"
+"When an invoice is confirmed, the quantity of the product or products on\n"
+"the invoice is deducted from stock automatically.\n"
+"\n"
+"Key features\n"
+"------------\n"
+"* Automatic stock deduction (delivery order) on customer invoice confirmation.\n"
+"* Credit notes return the products to stock automatically (optional).\n"
+"* Reset to draft / cancel reverses the stock movement automatically (optional),\n"
+"  so re-confirming an edited invoice always matches the new quantities.\n"
+"* Shortage policy: allow negative stock, keep the delivery waiting, or block\n"
+"  the invoice confirmation.\n"
+"* Warehouse per invoice (defaults from company settings / user warehouse).\n"
+"* Unit of measure conversion (e.g. invoice in Dozens, stock in Units).\n"
+"* Lines coming from Sales Orders are skipped to avoid double deduction.\n"
+"* Available quantity per invoice line, highlighted in red when insufficient.\n"
+"* Delivery status on invoices (list, form, filters, group by).\n"
+"* Protection: only Accounting Managers can delete, cancel or reset to draft\n"
+"  an invoice with a completed delivery.\n"
+"* Multi-company and multi-warehouse aware; Arabic translation included.\n"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model_terms:ir.ui.view,arch_db:invoice_delivery_management.view_move_form_inherit_idm_stock
+msgid ""
+"<i class=\"oi me-1\" data-icon=\"local_shipping\" title=\"Stock\"/>\n"
+"                    The stock transfer of this document is waiting for validation."
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields.selection,name:invoice_delivery_management.selection__res_company__idm_shortage_policy__force
+msgid "Allow negative stock"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_move_line__available_qty
+msgid "Available Qty"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields.selection,name:invoice_delivery_management.selection__res_company__idm_shortage_policy__block
+msgid "Block invoice confirmation"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model,name:invoice_delivery_management.model_res_company
+msgid "Company"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model,name:invoice_delivery_management.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model_terms:ir.actions.act_window,help:invoice_delivery_management.action_idm_invoice_pickings
+msgid ""
+"Confirm a customer invoice: its products are deducted from stock "
+"automatically."
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model_terms:ir.ui.view,arch_db:invoice_delivery_management.res_config_settings_view_form_inherit_idm
+msgid "Confirming a customer credit note returns its products to stock"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,help:invoice_delivery_management.field_res_company__idm_process_refunds
+#: model:ir.model.fields,help:invoice_delivery_management.field_res_config_settings__idm_process_refunds
+msgid "Confirming a customer credit note returns its products to stock."
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model_terms:ir.ui.view,arch_db:invoice_delivery_management.res_config_settings_view_form_inherit_idm
+msgid "Confirming a customer invoice deducts its products from stock"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields.selection,name:invoice_delivery_management.selection__stock_picking__idm_role__restock
+msgid "Credit Note Return"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,help:invoice_delivery_management.field_account_bank_statement_line__idm_update_stock
+#: model:ir.model.fields,help:invoice_delivery_management.field_account_move__idm_update_stock
+msgid ""
+"Deduct (invoice) or return (credit note) the products in stock when this "
+"document is confirmed."
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,help:invoice_delivery_management.field_res_company__idm_auto_stock
+#: model:ir.model.fields,help:invoice_delivery_management.field_res_config_settings__idm_auto_stock
+msgid ""
+"Deduct the invoiced products from stock when a customer invoice is "
+"confirmed."
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,help:invoice_delivery_management.field_res_company__idm_warehouse_id
+#: model:ir.model.fields,help:invoice_delivery_management.field_res_config_settings__idm_warehouse_id
+msgid ""
+"Default warehouse used for invoice stock moves. If empty, the user's default"
+" warehouse or the first warehouse of the company is used."
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model_terms:ir.ui.view,arch_db:invoice_delivery_management.view_account_invoice_filter_inherit_idm
+msgid "Delivered"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model_terms:ir.ui.view,arch_db:invoice_delivery_management.view_move_form_inherit_delivery
+msgid "Deliveries"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_bank_statement_line__delivery_count
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_move__delivery_count
+msgid "Delivery"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_bank_statement_line__delivery_status
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_move__delivery_status
+#: model_terms:ir.ui.view,arch_db:invoice_delivery_management.view_account_invoice_filter_inherit_idm
+msgid "Delivery Status"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model_terms:ir.ui.view,arch_db:invoice_delivery_management.view_account_invoice_filter_inherit_idm
+msgid "Delivery Waiting"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_move__display_name
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_company__display_name
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_stock_picking__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields.selection,name:invoice_delivery_management.selection__account_move__delivery_status__done
+msgid "Done"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model_terms:ir.ui.view,arch_db:invoice_delivery_management.view_picking_search_inherit_idm
+msgid "From Invoices"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_move__id
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_move_line__id
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_company__id
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_config_settings__id
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_stock_picking__id
+msgid "ID"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_move_line__idm_qty_warning
+msgid "Insufficient Stock"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model_terms:ir.ui.view,arch_db:invoice_delivery_management.view_picking_form_inherit_idm
+msgid "Invoice"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.actions.act_window,name:invoice_delivery_management.action_idm_invoice_pickings
+#: model:ir.ui.menu,name:invoice_delivery_management.menu_idm_invoice_pickings
+msgid "Invoice Deliveries"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields.selection,name:invoice_delivery_management.selection__stock_picking__idm_role__deduct
+msgid "Invoice Delivery"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.module.module,shortdesc:base.module_invoice_delivery_management
+msgid "Invoice Delivery Management"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_stock_picking__idm_role
+msgid "Invoice Operation"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields.selection,name:invoice_delivery_management.selection__stock_picking__idm_role__reversal
+msgid "Invoice Reversal"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model_terms:ir.ui.view,arch_db:invoice_delivery_management.res_config_settings_view_form_inherit_idm
+msgid "Invoice Stock Deduction"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_company__idm_warehouse_id
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_config_settings__idm_warehouse_id
+msgid "Invoice Warehouse"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,help:invoice_delivery_management.field_res_company__idm_skip_sale_lines
+#: model:ir.model.fields,help:invoice_delivery_management.field_res_config_settings__idm_skip_sale_lines
+msgid ""
+"Invoice lines linked to a Sales Order are delivered by the Sales Order "
+"itself and are ignored to avoid a double deduction."
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_move_line__idm_is_storable
+msgid "Is Storable"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model,name:invoice_delivery_management.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model,name:invoice_delivery_management.model_account_move_line
+msgid "Journal Item"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields.selection,name:invoice_delivery_management.selection__res_company__idm_shortage_policy__pending
+msgid "Keep the delivery waiting"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model_terms:ir.ui.view,arch_db:invoice_delivery_management.res_config_settings_view_form_inherit_idm
+msgid "Lines invoiced from a Sales Order are delivered by the order itself"
+msgstr ""
+
+#. module: invoice_delivery_management
+#. odoo-python
+#: code:addons/invoice_delivery_management/models/account_move.py:0
+msgid "No delivery operation type found for warehouse %s."
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model_terms:ir.actions.act_window,help:invoice_delivery_management.action_idm_invoice_pickings
+msgid "No invoice deliveries yet"
+msgstr ""
+
+#. module: invoice_delivery_management
+#. odoo-python
+#: code:addons/invoice_delivery_management/models/account_move.py:0
+msgid ""
+"No warehouse found for company %s. Please configure one in Invoicing "
+"settings."
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields.selection,name:invoice_delivery_management.selection__account_move__delivery_status__none
+msgid "Not Linked"
+msgstr ""
+
+#. module: invoice_delivery_management
+#. odoo-python
+#: code:addons/invoice_delivery_management/models/account_move.py:0
+msgid ""
+"Not enough stock to confirm %(invoice)s:\n"
+"%(details)s"
+msgstr ""
+
+#. module: invoice_delivery_management
+#. odoo-python
+#: code:addons/invoice_delivery_management/models/account_move.py:0
+msgid "Not enough stock: transfer %s is waiting for availability."
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields.selection,name:invoice_delivery_management.selection__account_move__delivery_status__partial
+msgid "Partially Done"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,help:invoice_delivery_management.field_account_move_line__available_qty
+msgid ""
+"Quantity on hand in the invoice warehouse, expressed in the line unit of "
+"measure."
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model_terms:ir.ui.view,arch_db:invoice_delivery_management.res_config_settings_view_form_inherit_idm
+msgid "Reset to draft / cancel reverses the stock movement of the invoice"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,help:invoice_delivery_management.field_res_company__idm_reverse_on_reset
+#: model:ir.model.fields,help:invoice_delivery_management.field_res_config_settings__idm_reverse_on_reset
+msgid ""
+"Resetting to draft or cancelling an invoice reverses its stock movement. Re-"
+"confirming the invoice creates a fresh movement with the new quantities."
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model_terms:ir.ui.view,arch_db:invoice_delivery_management.view_out_credit_note_tree_inherit_idm
+msgid "Return Status"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_company__idm_process_refunds
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_config_settings__idm_process_refunds
+msgid "Return Stock on Credit Notes"
+msgstr ""
+
+#. module: invoice_delivery_management
+#. odoo-python
+#: code:addons/invoice_delivery_management/models/stock_picking.py:0
+msgid "Reversal of %s"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_company__idm_reverse_on_reset
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_config_settings__idm_reverse_on_reset
+msgid "Reverse Stock on Reset / Cancel"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_stock_picking__idm_reversed
+#: model:ir.model.fields.selection,name:invoice_delivery_management.selection__account_move__delivery_status__returned
+msgid "Reversed"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.module.module,summary:base.module_invoice_delivery_management
+msgid ""
+"Save time: link inventory directly to invoices - confirming a customer "
+"invoice automatically deducts its products from stock"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_company__idm_skip_sale_lines
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_config_settings__idm_skip_sale_lines
+msgid "Skip Lines from Sales Orders"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_stock_picking__invoice_id
+#: model_terms:ir.ui.view,arch_db:invoice_delivery_management.view_picking_search_inherit_idm
+msgid "Source Invoice"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_bank_statement_line__idm_picking_ids
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_move__idm_picking_ids
+msgid "Stock Transfers"
+msgstr ""
+
+#. module: invoice_delivery_management
+#. odoo-python
+#: code:addons/invoice_delivery_management/models/account_move.py:0
+msgid "Stock movement reversed by %s."
+msgstr ""
+
+#. module: invoice_delivery_management
+#. odoo-python
+#: code:addons/invoice_delivery_management/models/account_move.py:0
+msgid "Stock transfer %s created and waiting for validation."
+msgstr ""
+
+#. module: invoice_delivery_management
+#. odoo-python
+#: code:addons/invoice_delivery_management/models/account_move.py:0
+msgid "Stock updated by transfer %s."
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,help:invoice_delivery_management.field_stock_picking__invoice_id
+msgid "The specific invoice that generated this transfer."
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,help:invoice_delivery_management.field_stock_picking__idm_reversed
+msgid ""
+"The stock movement of this transfer was reversed after its invoice was reset"
+" to draft or cancelled."
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model,name:invoice_delivery_management.model_stock_picking
+msgid "Transfer"
+msgstr ""
+
+#. module: invoice_delivery_management
+#. odoo-python
+#: code:addons/invoice_delivery_management/models/account_move.py:0
+msgid "Transfer %s is waiting for validation."
+msgstr ""
+
+#. module: invoice_delivery_management
+#. odoo-python
+#: code:addons/invoice_delivery_management/models/account_move.py:0
+msgid "Transfer %s needs Lot/Serial numbers and is waiting for validation."
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_bank_statement_line__idm_update_stock
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_move__idm_update_stock
+msgid "Update Stock"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_company__idm_auto_stock
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_config_settings__idm_auto_stock
+msgid "Update Stock from Invoices"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_company__idm_auto_validate
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_config_settings__idm_auto_validate
+msgid "Validate Deliveries Automatically"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model_terms:ir.ui.view,arch_db:invoice_delivery_management.res_config_settings_view_form_inherit_idm
+msgid "Validate the delivery at once, or leave it for the warehouse team"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,help:invoice_delivery_management.field_res_company__idm_auto_validate
+#: model:ir.model.fields,help:invoice_delivery_management.field_res_config_settings__idm_auto_validate
+msgid ""
+"Validate the delivery immediately so stock is deducted at invoice "
+"confirmation. If disabled, the delivery is created and reserved, waiting for"
+" the warehouse team."
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields.selection,name:invoice_delivery_management.selection__account_move__delivery_status__pending
+msgid "Waiting"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_bank_statement_line__idm_warehouse_id
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_account_move__idm_warehouse_id
+msgid "Warehouse"
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,help:invoice_delivery_management.field_account_bank_statement_line__idm_warehouse_id
+#: model:ir.model.fields,help:invoice_delivery_management.field_account_move__idm_warehouse_id
+msgid "Warehouse the products are delivered from (or returned to)."
+msgstr ""
+
+#. module: invoice_delivery_management
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_company__idm_shortage_policy
+#: model:ir.model.fields,field_description:invoice_delivery_management.field_res_config_settings__idm_shortage_policy
+msgid "When Stock is Insufficient"
+msgstr ""
+
+#. module: invoice_delivery_management
+#. odoo-python
+#: code:addons/invoice_delivery_management/models/account_move.py:0
+msgid ""
+"You cannot cancel \"%s\" because it has a completed delivery.\n"
+"Only an Accounting Manager can cancel such invoices."
+msgstr ""
+
+#. module: invoice_delivery_management
+#. odoo-python
+#: code:addons/invoice_delivery_management/models/account_move.py:0
+msgid ""
+"You cannot delete \"%s\" because it has a completed delivery.\n"
+"Only an Accounting Manager can delete such invoices."
+msgstr ""
+
+#. module: invoice_delivery_management
+#. odoo-python
+#: code:addons/invoice_delivery_management/models/account_move.py:0
+msgid ""
+"You cannot reset \"%s\" to draft because it has a completed delivery.\n"
+"Only an Accounting Manager can do this."
+msgstr ""
+
+#. module: invoice_delivery_management
+#. odoo-python
+#: code:addons/invoice_delivery_management/models/account_move.py:0
+msgid "available"
+msgstr ""
