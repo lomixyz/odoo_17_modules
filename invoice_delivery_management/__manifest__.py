@@ -1,6 +1,6 @@
 {
     'name': 'Invoice Delivery Management',
-    'version': '17.0.2.0.0',
+    'version': '17.0.2.1.1',
     'category': 'Accounting/Accounting',
     'author': 'Allam Bushra',
     'maintainer': 'Allam Bushra',
@@ -30,6 +30,15 @@ Key features
 * Protection: only Accounting Managers can delete, cancel or reset to draft
   an invoice with a completed delivery.
 * Multi-company and multi-warehouse aware; Arabic translation included.
+
+UPDATE (2.1.0/2.1.1): the Available Qty column on invoice lines now keeps
+the figure it had at the time the invoice was last edited as a draft, and
+once more right when it was confirmed, instead of showing today's stock
+level every time an old invoice is reopened. Note: this only applies going
+forward - invoice lines created before this update have no stored
+snapshot, so the first time this version computes them (right after the
+upgrade) they will take today's stock level as their snapshot, same as
+before.
 """,
     'depends': ['account', 'stock'],
     'data': [
