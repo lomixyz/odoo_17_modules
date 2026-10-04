@@ -1,6 +1,6 @@
 {
     'name': 'Invoice Delivery Management',
-    'version': '17.0.2.1.1',
+    'version': '17.0.2.1.2',
     'category': 'Accounting/Accounting',
     'author': 'Allam Bushra',
     'maintainer': 'Allam Bushra',
