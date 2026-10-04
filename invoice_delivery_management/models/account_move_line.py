@@ -11,19 +11,25 @@ class AccountMoveLine(models.Model):
         string="Available Qty",
         compute="_compute_available_qty",
         digits='Product Unit',
-        store=False,
-        help="Quantity on hand in the invoice warehouse, expressed in the line unit of measure.",
+        store=True,
+        help="Snapshot of the quantity on hand in the invoice warehouse, expressed in the "
+             "line unit of measure. Recomputed while the invoice is a draft (as the product, "
+             "quantity or warehouse change) and once more right when it is confirmed, then "
+             "frozen - so each invoice keeps the figure it had at that time instead of "
+             "showing today's stock level whenever it is reopened later.",
     )
     idm_qty_warning = fields.Boolean(
         string="Insufficient Stock",
         compute="_compute_available_qty",
+        store=True,
     )
     idm_is_storable = fields.Boolean(
         string="Is Storable",
         compute="_compute_available_qty",
+        store=True,
     )
 
-    @api.depends('product_id', 'product_uom_id', 'quantity',
+    @api.depends('product_id', 'product_uom_id', 'quantity', 'move_id.state',
                  'move_id.idm_warehouse_id', 'move_id.company_id')
     def _compute_available_qty(self):
         storable = self.filtered(lambda l: l.product_id.is_storable)
